@@ -19,5 +19,4 @@ feature 'administrator management' do
 
     expect(page).to have_content('Headphones')
   end
-
 end
