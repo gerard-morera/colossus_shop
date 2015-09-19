@@ -1,3 +1,3 @@
 class Product < ActiveRecord::Base
-  belongs :category
+  belongs_to :category
 end
