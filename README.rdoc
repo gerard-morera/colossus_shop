@@ -1,6 +1,5 @@
 == README
 
-
 USER STORIES
 
 As an administrator for the web
