@@ -1,0 +1,10 @@
+no products
+
+<% if @products.any? %>
+  <% @products.each do |product| %>
+    <%= product.name %>
+    <%= product.description %>
+  <% end %>
+<% end %>
+
+<%= link_to "insert new product", new_admin_product_path %>

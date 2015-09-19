@@ -1,7 +1,5 @@
-<% form_for @new_product do |f| %>
-  name:        <%= f.text_field :name %>
-  description: <%= f.text_area :description, size: "60x12" %>
-  save:        <%= f.submit "save" %>
+<%= form_for [:admin, @new_product] do |f| %>
+  name:        <%= f.text_field :name, id: "name" %>
+  description: <%= f.text_area  :description, size: "30x3", id: "description" %>
+  save:        <%= f.submit "save", id: "submit" %>
 <% end %>
-
-hwekjdds

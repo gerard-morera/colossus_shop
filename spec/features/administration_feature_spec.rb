@@ -9,11 +9,13 @@ feature 'administrator management' do
 
   scenario 'administrator insert products' do
     visit '/admin/products'
-    
+
+    click_link 'insert new product'
+
     fill_in 'name', with: "Headphones"
-    fill_in 'description', "Bluetooth, high quality."
+    fill_in 'description', with: "Bluetooth, high quality."
     click_button 'submit'
 
-    expect(page).to have_content('product inserted')
+    expect(page).to have_content('Headphones')
   end
 end
