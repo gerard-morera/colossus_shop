@@ -1,4 +1,4 @@
- require 'rails_helper'
+require 'rails_helper'
 
 feature 'administrator management' do
   scenario 'administrator views the products' do
@@ -10,10 +10,12 @@ feature 'administrator management' do
   scenario 'administrator insert products' do
     visit '/admin/products'
 
-    click_button 'add new product'
-    fill_in 'name', with: "Ball"
+    click_link 'insert new product'
+
+    fill_in 'name', with: "Headphones"
+    fill_in 'description', with: "Bluetooth, high quality."
     click_button 'submit'
 
-    expect(page).to have_content('product inserted')
+    expect(page).to have_content('Headphones')
   end
 end
