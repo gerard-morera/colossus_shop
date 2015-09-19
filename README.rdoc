@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+USER STORIES
 
-* Ruby version
+As an administrator for the web
+I want to be able to 
+insert products.
 
-* System dependencies
+As an administrator for the web
+I want to be able to
+organize products categories.
 
-* Configuration
+As a user
+I want to be able to
+navigate through products.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+As a user
+I want to be able to
+select products into the basquet.
