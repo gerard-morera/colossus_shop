@@ -5,7 +5,6 @@ module Admin
     end
 
     def create
-      binding.pry
     end
   end
 end
