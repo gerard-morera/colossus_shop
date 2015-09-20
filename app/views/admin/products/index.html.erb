@@ -3,8 +3,8 @@
   <% @products.each do |product| %>
     <%= product.name %>
     <%= product.description %>
-    <%= product.categories.each do |category| %>
-      <%= category %>
+    <% product.categories.each do |category| %>
+      <%= category.title %>
     <% end %>
   <% end %>
 <% else %>
