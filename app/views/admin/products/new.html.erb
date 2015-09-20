@@ -1,5 +1,6 @@
 <%= form_for [:admin, @new_product] do |f| %>
   name:        <%= f.text_field :name, id: "name" %>
   description: <%= f.text_area  :description, size: "30x3", id: "description" %>
+  category:    <%= f.text_field :categories, id: "category" %>
   save:        <%= f.submit "save", id: "submit" %>
 <% end %>

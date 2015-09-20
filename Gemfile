@@ -45,6 +45,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'pry-rails'
+  gem 'pry-coolline'
+end
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara' 

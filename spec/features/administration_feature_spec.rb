@@ -12,8 +12,9 @@ feature 'administrator management' do
 
     click_link 'insert new product'
 
-    fill_in 'name', with: "Headphones"
+    fill_in 'name',        with: "Headphones"
     fill_in 'description', with: "Bluetooth, high quality."
+    fill_in 'category',    with: "Electronics & Computers"
     click_button 'submit'
 
     expect(page).to have_content('Headphones')
