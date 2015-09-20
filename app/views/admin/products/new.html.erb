@@ -1,6 +1,6 @@
-<%= form_for [:admin, @new_product] do |f| %>
+<%= form_for [:admin, @product] do |f| %>
   name:        <%= f.text_field :name, id: "name" %>
   description: <%= f.text_area  :description, size: "30x3", id: "description" %>
-  category:    <%= f.text_field :categories, id: "category" %>
+  category:    <%= f.collection_check_boxes :category_ids, @category, :id, :title %>
   save:        <%= f.submit "save", id: "submit" %>
 <% end %>
