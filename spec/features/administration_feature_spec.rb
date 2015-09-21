@@ -46,6 +46,18 @@ feature 'administrator management' do
     expect(page).to have_content 'camping'
   end
 
+  scenario 'administrator inserts subcategories' do
+    visit 'admin/subcategories'
+    click_link 'insert new category'
+
+    fill_in 'title', with: "music"
+    check("pianos")
+    click_button 'submit'
+
+    expect(page).to have_content 'music'
+    expect(page).to have_content 'pianos'
+  end
+
   def create_category name
     Category.create(title: name)
   end
