@@ -1,4 +1,5 @@
 <%= form_for [:admin, @category] do |f| %>
-  title:   <%= f.text_field :title, id: "title" %>
-  submit:  <%= f.submit "save", id: "submit" %>
+  title:        <%= f.text_field :title, id: "title" %>
+  subcategory <%= f.text_field :subcategories, id: "subcategory" %>
+  submit:       <%= f.submit "save", id: "submit" %>
 <% end %>

@@ -40,18 +40,18 @@ feature 'administrator management' do
     visit '/admin/products'
     click_link 'insert new category'
 
-    fill_in 'title',  with: "camping"
+    fill_in 'title', with: "camping"
     click_button 'submit'
 
     expect(page).to have_content 'camping'
   end
 
-  scenario 'administrator inserts subcategories' do
+  scenario 'administrator inserts category with subcategories' do
     visit 'admin/categories'
     click_link 'insert new category'
 
-    fill_in 'title', with: "music"
-    check("pianos")
+    fill_in 'title',       with: "music"
+    fill_in 'subcategory', with: "pianos"
     click_button 'submit'
 
     expect(page).to have_content 'music'
