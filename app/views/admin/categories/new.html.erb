@@ -2,7 +2,7 @@
   <%= f.label :category %>
   <%= f.text_field :title, id: "title" %>
 
-  <%= f.fields_for :subcategory, @subcategories do |subcategory| %> 
+  <%= f.fields_for :subcategory, @subcategory do |subcategory| %> 
     <%= subcategory.label :subcategories %>
     <%= subcategory.text_field :title, id: "subcategory" %>
   <% end %>
