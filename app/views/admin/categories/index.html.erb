@@ -1,0 +1,10 @@
+<% if @categories.any? %>
+  <% @categories.each do |category| %>
+    <%= category.title %>
+    <% category.subcategories.each do |subcategory| %>
+      <%= subcategory.title %>
+    <% end %><br><br>
+  <% end %>
+<% end %>
+
+<%= link_to "insert new category", new_admin_category_path %>
