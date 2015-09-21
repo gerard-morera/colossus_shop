@@ -1,5 +1,12 @@
 <%= form_for [:admin, @category] do |f| %>
-  title:      <%= f.text_field :title, id: "title" %>
-  subcategory <%= f.text_field :subcategories, id: "subcategory" %>
-  submit:     <%= f.submit "save", id: "submit" %>
+  <%= f.label :category %>
+  <%= f.text_field :title, id: "title" %>
+
+  <%= f.fields_for :subcategory, @subcategories do |subcategory| %> 
+    <%= subcategory.label :subcategories %>
+    <%= subcategory.text_field :title, id: "subcategory" %>
+  <% end %>
+  <%= f.label :submit %>
+  <%= f.submit "save", id: "submit" %>
 <% end %>
+
