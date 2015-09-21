@@ -47,7 +47,7 @@ feature 'administrator management' do
   end
 
   scenario 'administrator inserts subcategories' do
-    visit 'admin/subcategories'
+    visit 'admin/categories'
     click_link 'insert new category'
 
     fill_in 'title', with: "music"
