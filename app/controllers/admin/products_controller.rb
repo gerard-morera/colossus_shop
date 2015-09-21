@@ -16,7 +16,12 @@ module Admin
     end
 
     def product_params
-      params.require(:product).permit(:name, :description)
+      product_params = params.require(:product).permit(:name, :description)
+      product_params.merge category_params
+    end
+
+    def category_params
+      params[:product].select { |key,_| key == "category_ids" }
     end
   end
 end

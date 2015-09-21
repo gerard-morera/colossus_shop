@@ -1,0 +1,5 @@
+<% if @categories.any? %>
+  <% @categories.each do |category| %>
+    <%= category.title %>
+  <% end %>
+<% end %>
