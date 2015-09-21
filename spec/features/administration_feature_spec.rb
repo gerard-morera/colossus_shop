@@ -40,7 +40,7 @@ feature 'administrator management' do
     visit '/admin/products'
     click_link 'insert new category'
 
-    fill_in 'name',  with: 'camping'
+    fill_in 'title',  with: "camping"
     click_button 'submit'
 
     expect(page).to have_content 'camping'
