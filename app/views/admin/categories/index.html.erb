@@ -1,10 +1,11 @@
 <% if @categories.any? %>
   <% @categories.each do |category| %>
-    <%= category.title %>
+    <%= link_to category.title, admin_category_path(category) %>
     <% category.subcategories.each do |subcategory| %>
-      <%= subcategory.title %>
+      <%= link_to subcategory.title, admin_categoty_path(subcategory)%>
     <% end %><br><br>
   <% end %>
 <% end %>
 
-<%= link_to "insert new category", new_admin_category_path %>
+<%= link_to "insert new category", new_admin_category_path %><br>
+<%= link_to "insert new product",  new_admin_product_path %>

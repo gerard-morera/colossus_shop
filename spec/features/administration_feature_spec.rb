@@ -58,6 +58,30 @@ feature 'administrator management' do
     expect(page).to have_content 'pianos'
   end
 
+  scenario 'administrator clicks on category and sees subset of producrts' do
+    visit 'admin/categories'
+    click_link 'insert new category'
+
+    fill_in 'title',       with: "music"
+    fill_in 'subcategory', with: "pianos"
+    click_button 'submit'
+    create_category("home")
+    create_category("cloth")
+
+    click_link 'insert new product'
+
+    fill_in 'name',        with: "Mozard Sheet"
+    fill_in 'description', with: "Piano Sonata No. 3 in B-flat major, K. 281"
+    check('music')  
+    check('pianos')    
+    click_button 'submit'
+
+    click_link 'All categories'
+    click_link 'pianos'
+
+    expect(page).to have_content "Mozard Sheet"
+  end
+
   def create_category name
     Category.create(title: name)
   end
