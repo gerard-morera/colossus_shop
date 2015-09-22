@@ -1,15 +1,20 @@
 
 <% if @products.any? %>
   <% @products.each do |product| %>
-    <%= product.name %>
-    <%= product.description %>
+   <%= label(product.name, :product) %>
+    <%= product.name %><br>
+
+    <%= label(product.description, :description) %>
+    <%= product.description %><br>
+
     <% product.categories.each do |category| %>
-      <%= category.title %>
-    <% end %>
+      <%= label(category.title, :category) %>
+      <%= category.title %><br>
+    <% end %><br><br>
   <% end %>
 <% else %>
   no products
-<% end %>
+<% end %><br><br>
 
-<%= link_to "insert new product",  new_admin_product_path %>
+<%= link_to "insert new product",  new_admin_product_path %><br>
 <%= link_to "insert new category", new_admin_category_path %>

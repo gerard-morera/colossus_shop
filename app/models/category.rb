@@ -5,4 +5,6 @@ class Category < ActiveRecord::Base
   has_many :categorizations
 
   accepts_nested_attributes_for :subcategories
+
+  validates :title, presence: true
 end
