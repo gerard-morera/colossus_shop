@@ -23,5 +23,4 @@ describe Product do
     product.valid?
    expect(product.errors[:categories]).to include("can't be blank")
   end
-
 end
