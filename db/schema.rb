@@ -27,18 +27,6 @@ ActiveRecord::Schema.define(version: 20150923194606) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories_subcategories", force: :cascade do |t|
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "category_id"
-    t.integer  "subcategory_id"
-  end
-
-  create_table "categoritzations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "categorizations", force: :cascade do |t|
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -50,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150923194606) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "product_id"
+    t.integer  "cart_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -57,7 +46,6 @@ ActiveRecord::Schema.define(version: 20150923194606) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "line_id"
   end
 
   create_table "products_categories", force: :cascade do |t|

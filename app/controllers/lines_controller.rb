@@ -1,9 +1,9 @@
 class LinesController < ApplicationController
   def create
     product = Product.find(product_id)
-    line    = product.lines.create
+    line    = product.create_line
     
-    cart.add line
+    line.add_to cart_id
 
     render nothing: true
   end
@@ -12,7 +12,7 @@ class LinesController < ApplicationController
     params.permit(:product_id).fetch(:product_id)
   end
 
-  def cart
-    Cart.find(session[:cart_id])
+  def cart_id
+    session[:cart_id].fetch(:cart_id)
   end
 end
