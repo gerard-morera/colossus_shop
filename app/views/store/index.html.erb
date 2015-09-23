@@ -1,0 +1,15 @@
+<% if @products %>
+  <% @products.each do |product| %>
+    <%= label(product.name, :product) %>
+    <%= link_to product.name, controller: "store", action: "show", id: product %><br>
+    <%= label(product.description, :description) %>
+    <%= product.description %><br>
+
+    <% product.categories.each do |category| %>
+      <%= label(category.title, :category) %>
+      <%= category.title %><br>
+    <% end %><br><br>
+  <% end %>
+<% else %>
+  no products
+<% end %><br><br>

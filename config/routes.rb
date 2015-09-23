@@ -3,4 +3,7 @@ Rails.application.routes.draw do
     resources :products
     resources :categories
   end
+  
+  root 'store#index'
+  resources :store, only: [:index, :show]
 end
