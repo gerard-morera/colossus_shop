@@ -2,7 +2,7 @@ class LinesController < ApplicationController
   def create
     line = Line.create(product_ids: product_id)
 
-    render json: line
+    render nothing: true
   end
 
   def product_id
