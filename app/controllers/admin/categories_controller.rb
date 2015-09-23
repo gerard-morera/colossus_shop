@@ -4,6 +4,10 @@ module Admin
       @categories = Category.all
     end
 
+    def show
+      @category = Category.find category_id
+    end
+
     def new
       @category    = Category.new
       @sucategory  = Category.new
@@ -15,6 +19,10 @@ module Admin
       category.call
 
       redirect_to admin_categories_path
+    end
+
+    def category_id
+      params.require("id").to_i
     end
   end
 end
