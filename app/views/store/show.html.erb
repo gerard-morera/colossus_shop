@@ -1,4 +1,4 @@
 <%= @product.name %>
 <%= @product.description %>
 
-<%= button_to "Add to Cart", new_line_path(@product), remote: true %>
+<%= button_to "Add to Cart", {controller: "lines", action: "create", product_id: @product.id}, method: "POST" %>

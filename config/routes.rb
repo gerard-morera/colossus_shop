@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   
   root 'store#index'
   resources :store, only: [:index, :show]
+  resources :lines,  only: [:index, :create]
 end
