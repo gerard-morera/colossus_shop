@@ -1,11 +1,12 @@
 class LinesController < ApplicationController
   def create
-    line = Line.create(product_ids: product_id)
-
+    product = Product.find(product_id)
+    product.lines.create
+        
     render nothing: true
   end
 
   def product_id
-    params.permit(:product_id).values
+    params.permit(:product_id).fetch(:product_id)
   end
 end
