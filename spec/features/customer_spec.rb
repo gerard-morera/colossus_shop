@@ -4,8 +4,6 @@ feature 'customer interaction' do
     create_product("26 wheel Roadmaster bike", "color blue", "sport")
     
     visit '/'
-
-    click_link "26 wheel Roadmaster bike"
     click_button "Add to Cart"
     
     expect(page).to have_content("26 wheel Roadmaster bike x 1")
