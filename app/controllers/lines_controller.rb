@@ -5,9 +5,9 @@ class LinesController < ApplicationController
     product = Product.find(product_id)
     line    = product.lines.create
     
-    line.set cart_id
+    line.attach_to cart_id
 
-    render nothing: true
+    redirect_to controller: :store, action: :index
   end
 
   private

@@ -8,7 +8,8 @@
     <% product.categories.each do |category| %>
       <%= label(category.title, :category) %>
       <%= category.title %><br>
-    <% end %><br><br>
+    <% end %>
+    <%= button_to "Add to Cart", {controller: "lines", action: "create", product_id: product.id}, method: "POST" %><br><br>
   <% end %>
 <% else %>
   no products
