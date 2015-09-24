@@ -1,8 +1,8 @@
 class Line < ActiveRecord::Base
-  belongs_to :products
-  belongs_to :cart
+  belongs_to :product, inverse_of: :lines
+  belongs_to :cart, inverse_of: :lines
 
-  def add_to cart_id
-    self.cart = Cart.find(cart_id)
+  def set cart_id
+    update(cart_id: cart_id)
   end
 end
