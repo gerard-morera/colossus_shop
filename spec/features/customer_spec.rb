@@ -12,11 +12,12 @@ feature 'Adding to cart' do
       expect { click_button "Add to Cart" }.to change(Cart, :count).by(1)
     end
 
-    it 'appears in their cart' do
+    it 'appears in their cart', js: true do
+
       visit '/'
       click_button "Add to Cart"
-      
-      expect(page).to have_content("26 wheel Roadmaster bike x 1")
+
+      expect(page).to have_content("26 wheel Roadmaster bike")
     end
 
   end
