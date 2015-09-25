@@ -1,5 +1,5 @@
 class LinesController < ApplicationController
-  before_action :set_cart
+  before_action :set_cart, only: [:create]
 
   def create
     product = Product.find(product_id)
@@ -23,5 +23,6 @@ class LinesController < ApplicationController
     unless session[:cart_id]
       session[:cart_id] = Cart.create.id
     end
+    binding.pry
   end
 end

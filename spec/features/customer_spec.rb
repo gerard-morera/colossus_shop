@@ -1,7 +1,7 @@
+require 'rails_helper'
+
 feature 'Adding to cart' do
-
   context "when customer selects a product" do
-
     before do
       create_category("sport")
       create_product("26 wheel Roadmaster bike", "color blue", "sport")
@@ -13,13 +13,11 @@ feature 'Adding to cart' do
     end
 
     it 'appears in their cart', js: true do
-
       visit '/'
       click_button "Add to Cart"
 
       expect(page).to have_content("26 wheel Roadmaster bike")
     end
-
   end
 
   def create_product(name, description, category)
