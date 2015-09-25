@@ -9,8 +9,10 @@
       <%= label(category.title, :category) %>
       <%= category.title %><br>
     <% end %>
-    <%= button_to "Add to Cart", {controller: "lines", action: "create", product_id: product.id}, method: "POST" %><br><br>
+    <%= button_to "Add to Cart", {controller: "lines", action: "create", product_id: product.id}, method: "POST", remote: true %><br><br>
   <% end %>
 <% else %>
   no products
 <% end %><br><br>
+
+<div class="cart"> </div>

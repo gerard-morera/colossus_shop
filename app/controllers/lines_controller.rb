@@ -6,8 +6,7 @@ class LinesController < ApplicationController
     line    = product.lines.create
     
     line.attach_to cart_id
-
-    redirect_to controller: :store, action: :index
+    render nothing: true
   end
 
   private
