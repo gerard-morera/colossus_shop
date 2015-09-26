@@ -6,29 +6,22 @@ module Categories
     end
 
     def call
-      category = find_or_create 
+      category = find_or_create params
 
       if subcategory?
-        @group = :subcategory
-
-        category.subcategories find_or_create
+        category.subcategories find_or_create subcategory_params
       end
     end
 
     private
 
-    attr_reader :params, :find_or_create_class, :group
+    attr_reader :params, :find_or_create_class
 
-    def find_or_create
-      find_or_create = find_or_create_class.new params, group
+    def find_or_create params
+      find_or_create = find_or_create_class.new params
       find_or_create.call
     end
 
-
-    def subcategory?
-      subcategory_params.fetch :title
-    end
-
-    delegate :subcategory_params, to: :params
+    delegate :subcategory_params, :subcategory?, to: :params
   end
 end

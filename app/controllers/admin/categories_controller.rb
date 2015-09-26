@@ -5,13 +5,12 @@ module Admin
     end
 
     def show
-      @category = Category.find category_id
+      @category = Category.find(id)
     end
 
     def new
-      @category    = Category.new
-      @sucategory  = Category.new
-      # @subcategories = @category.subcategories.build
+      @category     = Category.new
+      @subcategory  = Category.new
     end
 
     def create
@@ -21,8 +20,10 @@ module Admin
       redirect_to admin_categories_path
     end
 
-    def category_id
-      params.require("id").to_i
+    private
+
+    def id
+      category_params.id
     end
 
     def category_params

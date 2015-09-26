@@ -3,16 +3,20 @@ class CategoryParams
     @raw_params = raw_params
   end
 
-  def category_id
+  def id
     raw_params.fetch :id
   end
 
-  def category_params
-    params.permit(:title)
+  def title
+    params.fetch :title
+  end
+
+  def subcategory?
+    not params[:subcategory].fetch(:title).empty?
   end
 
   def subcategory_params
-    params.permit(:subcategory => :title).fetch :subcategory
+    CategoryParams.new new_params_hash
   end
 
   private
@@ -21,5 +25,15 @@ class CategoryParams
     raw_params.require :category
   end
 
+  def action_controller_parameters 
+    @action_controller_parameters ||= ActionController::Parameters.new
+  end
+
+  def new_params_hash
+    action_controller_parameters[:category] = params.fetch :subcategory
+    action_controller_parameters   
+  end
+
   attr_reader :raw_params
 end
+
