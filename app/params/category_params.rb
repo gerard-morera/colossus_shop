@@ -1,23 +1,25 @@
 class CategoryParams
-  def intialize raw_params
+  def initialize raw_params
     @raw_params = raw_params
   end
 
   def category_id
-    raw_params.require('id').to_i
+    raw_params.fetch :id
   end
 
   def category_params
-    params.fetch :title
+    params.permit(:title)
+  end
+
+  def subcategory_params
+    params.permit(:subcategory => :title).fetch :subcategory
   end
 
   private
 
   def params
-    raw_params.require(:category).permit(:title)
+    raw_params.require :category
   end
-
-
 
   attr_reader :raw_params
 end

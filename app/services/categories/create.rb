@@ -20,16 +20,18 @@ module Categories
       end
     end
     
-    def category_params 
-      params.require(:category).permit(:title)
-    end
+    # def category_params 
+    #   params.require(:category).permit(:title)
+    # end
 
-    def subcategory_params
-      @subcategory_params ||= params.require(:category).permit(:subcategory => :title).values.first
-    end
+    # def subcategory_params
+    #   @subcategory_params ||= params.require(:category).permit(:subcategory => :title).values.first
+    # end
 
     def has_value? category_params
       !category_params.values.first.empty?
     end
+
+    delegate :category_params, :subcategory_params, to: :params
   end
 end

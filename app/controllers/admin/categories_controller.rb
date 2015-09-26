@@ -15,7 +15,7 @@ module Admin
     end
 
     def create
-      category = Categories::Create.new params
+      category = Categories::Create.new category_params
       category.call
 
       redirect_to admin_categories_path
@@ -23,6 +23,10 @@ module Admin
 
     def category_id
       params.require("id").to_i
+    end
+
+    def category_params
+      CategoryParams.new(params)
     end
   end
 end
