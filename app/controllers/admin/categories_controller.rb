@@ -15,7 +15,7 @@ module Admin
     end
 
     def create
-      category = Categories::Create.new category_params
+      category = Categories::Delegator.new category_params
       category.call
 
       redirect_to admin_categories_path

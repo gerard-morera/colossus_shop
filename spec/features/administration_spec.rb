@@ -36,7 +36,7 @@ feature 'administrator management' do
     expect(page).to have_content('cloth')
   end
 
-  scenario 'administrator insert categories' do
+  scenario 'administrator insert category' do
     visit '/admin/products'
     click_link 'insert new category'
 
