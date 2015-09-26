@@ -29,6 +29,6 @@ module Categories
       subcategory_params.fetch :title
     end
 
-    delegate :category_params, :subcategory_params, to: :params
+    delegate :subcategory_params, to: :params
   end
 end
