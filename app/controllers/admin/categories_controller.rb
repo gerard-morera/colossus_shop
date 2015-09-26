@@ -5,7 +5,7 @@ module Admin
     end
 
     def show
-      @category = Category.find category_id
+      @category = Category.find category_params
     end
 
     def new
@@ -23,6 +23,10 @@ module Admin
 
     def category_id
       params.require("id").to_i
+    end
+
+    def category_params
+      CategoryParams.new params
     end
   end
 end

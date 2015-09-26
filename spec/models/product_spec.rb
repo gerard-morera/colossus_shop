@@ -17,10 +17,4 @@ describe Product do
     product.valid?
     expect(product.errors[:description]).to include("can't be blank")
   end
-
-  it 'is invalid without a category' do
-    product  = Product.new(name: "pencil", description: "color blue")
-    product.valid?
-   expect(product.errors[:categories]).to include("can't be blank")
-  end
 end

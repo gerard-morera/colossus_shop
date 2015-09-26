@@ -3,6 +3,6 @@ class Product < ActiveRecord::Base
   has_many :products_categories
   has_many :lines, inverse_of: :product
 
-  validates :name, :description, :categories, presence: true
+  validates :name, :description, presence: true
 end
 

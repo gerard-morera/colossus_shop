@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'capybara/poltergeist'
 
 require 'support/database_cleaner'
+require 'support/factory_girl'
 
 Capybara.javascript_driver = :poltergeist
 ActiveRecord::Migration.maintain_test_schema!
