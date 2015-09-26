@@ -12,7 +12,7 @@ feature 'Adding to cart' do
       expect { click_button "Add to Cart" }.to change(Cart, :count).by(1)
     end
 
-    it 'appears in their cart', js: true do
+    xit 'appears in their cart', js: true do
       visit '/'
       click_button "Add to Cart"
 

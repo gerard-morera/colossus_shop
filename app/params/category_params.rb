@@ -7,7 +7,17 @@ class CategoryParams
     raw_params.require('id').to_i
   end
 
+  def category_params
+    params.fetch :title
+  end
+
   private
+
+  def params
+    raw_params.require(:category).permit(:title)
+  end
+
+
 
   attr_reader :raw_params
 end
