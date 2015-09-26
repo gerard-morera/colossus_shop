@@ -1,5 +1,5 @@
 describe Carts::FindOrCreate do
-  subject { FindOrCreate.new params }
+  subject { Carts::FindOrCreate.new params }
   
   let(:params)  { double 'params', cart_id: value}
   let(:Cart)    { double 'Cart' }
