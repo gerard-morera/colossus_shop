@@ -1,7 +1,7 @@
 class CartsController < ApplicationController  
   def index
-    binding.pry
     cart = Cart.find(session[:cart_id])
+    
     render json: (presenter cart).to_json
   end
 

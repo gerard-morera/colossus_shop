@@ -1,4 +1,4 @@
-require 'rails_helper'
+  require 'rails_helper'
 
 feature 'Adding to cart' do
   context "when customer selects a product" do
