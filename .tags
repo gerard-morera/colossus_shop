@@ -1,0 +1,96 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddColumnToCategorization	db/migrate/20150921103659_add_column_to_categorization.rb	/^class AddColumnToCategorization < ActiveRecord::Migration$/;"	c
+AddColumnToLine	db/migrate/20150923174719_add_column_to_line.rb	/^class AddColumnToLine < ActiveRecord::Migration$/;"	c
+AddColumnToProductsCategories	db/migrate/20150920095453_add_column_to_products_categories.rb	/^class AddColumnToProductsCategories < ActiveRecord::Migration$/;"	c
+Admin	app/controllers/admin/categories_controller.rb	/^module Admin$/;"	m
+Admin	app/controllers/admin/products_controller.rb	/^module Admin $/;"	m
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:ClossusShop
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Cart	app/models/cart.rb	/^class Cart < ActiveRecord::Base$/;"	c
+Carts	app/services/carts/find_or_create.rb	/^module Carts$/;"	m
+CartsController	app/controllers/carts_controller.rb	/^class CartsController < ApplicationController  $/;"	c
+Categories	app/services/categories/delegator.rb	/^module Categories$/;"	m
+Categories	app/services/categories/find_or_create.rb	/^module Categories$/;"	m
+CategoriesController	app/controllers/admin/categories_controller.rb	/^  class CategoriesController < ApplicationController$/;"	c	class:Admin
+Categorization	app/models/categorization.rb	/^class Categorization < ActiveRecord::Base$/;"	c
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+CategoryParams	app/params/category_params.rb	/^class CategoryParams$/;"	c
+ClossusShop	config/application.rb	/^module ClossusShop$/;"	m
+Create	app/services/lines/create.rb	/^  class Create$/;"	c	class:Lines
+CreateCarts	db/migrate/20150923194606_create_carts.rb	/^class CreateCarts < ActiveRecord::Migration$/;"	c
+CreateCategories	db/migrate/20150919164713_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateCategorizations	db/migrate/20150921103650_create_categorizations.rb	/^class CreateCategorizations < ActiveRecord::Migration$/;"	c
+CreateLines	db/migrate/20150923172533_create_lines.rb	/^class CreateLines < ActiveRecord::Migration$/;"	c
+CreateProducts	db/migrate/20150919120307_create_products.rb	/^class CreateProducts < ActiveRecord::Migration$/;"	c
+CreateProductsCategories	db/migrate/20150920095214_create_products_categories.rb	/^class CreateProductsCategories < ActiveRecord::Migration$/;"	c
+Delegator	app/services/categories/delegator.rb	/^  class Delegator$/;"	c	class:Categories
+FindOrCreate	app/services/carts/find_or_create.rb	/^  class FindOrCreate$/;"	c	class:Carts
+FindOrCreate	app/services/categories/find_or_create.rb	/^  class FindOrCreate$/;"	c	class:Categories
+Line	app/models/line.rb	/^class Line < ActiveRecord::Base$/;"	c
+LineParams	app/params/line_params.rb	/^class LineParams$/;"	c
+Lines	app/services/lines/create.rb	/^module Lines$/;"	m
+LinesController	app/controllers/lines_controller.rb	/^class LinesController < ApplicationController$/;"	c
+Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
+ProductsCategory	app/models/products_category.rb	/^class ProductsCategory < ActiveRecord::Base$/;"	c
+ProductsController	app/controllers/admin/products_controller.rb	/^  class ProductsController < ApplicationController$/;"	c	class:Admin
+StoreController	app/controllers/store_controller.rb	/^class StoreController < ApplicationController$/;"	c
+action_controller_parameters	app/params/category_params.rb	/^  def action_controller_parameters $/;"	f	class:CategoryParams
+attach_to	app/models/line.rb	/^  def attach_to cart_id$/;"	f	class:Line
+call	app/services/carts/find_or_create.rb	/^    def call$/;"	f	class:Carts.FindOrCreate
+call	app/services/categories/delegator.rb	/^    def call$/;"	f	class:Categories.Delegator
+call	app/services/categories/find_or_create.rb	/^    def call$/;"	f	class:Categories.FindOrCreate
+call	app/services/lines/create.rb	/^    def call$/;"	f	class:Lines.Create
+cart	app/services/lines/create.rb	/^    def cart $/;"	f	class:Lines.Create
+cart_id	app/params/line_params.rb	/^  def cart_id$/;"	f	class:LineParams
+category_params	app/controllers/admin/categories_controller.rb	/^    def category_params$/;"	f	class:Admin.CategoriesController
+category_params	app/controllers/admin/products_controller.rb	/^    def category_params$/;"	f	class:Admin.ProductsController
+change	db/migrate/20150919120307_create_products.rb	/^  def change$/;"	f	class:CreateProducts
+change	db/migrate/20150919164713_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20150920095214_create_products_categories.rb	/^  def change$/;"	f	class:CreateProductsCategories
+change	db/migrate/20150920095453_add_column_to_products_categories.rb	/^  def change$/;"	f	class:AddColumnToProductsCategories
+change	db/migrate/20150921103650_create_categorizations.rb	/^  def change$/;"	f	class:CreateCategorizations
+change	db/migrate/20150921103659_add_column_to_categorization.rb	/^  def change$/;"	f	class:AddColumnToCategorization
+change	db/migrate/20150923172533_create_lines.rb	/^  def change$/;"	f	class:CreateLines
+change	db/migrate/20150923174719_add_column_to_line.rb	/^  def change$/;"	f	class:AddColumnToLine
+change	db/migrate/20150923194606_create_carts.rb	/^  def change$/;"	f	class:CreateCarts
+create	app/controllers/admin/categories_controller.rb	/^    def create$/;"	f	class:Admin.CategoriesController
+create	app/controllers/admin/products_controller.rb	/^    def create$/;"	f	class:Admin.ProductsController
+create	app/controllers/lines_controller.rb	/^  def create$/;"	f	class:LinesController
+create_category	spec/features/administration_spec.rb	/^  def create_category name$/;"	f
+create_category	spec/features/customer_spec.rb	/^  def create_category name$/;"	f
+create_product	spec/features/customer_spec.rb	/^  def create_product(name, description, category)$/;"	f
+find_or_create	app/services/categories/delegator.rb	/^    def find_or_create params$/;"	f	class:Categories.Delegator
+id	app/controllers/admin/categories_controller.rb	/^    def id$/;"	f	class:Admin.CategoriesController
+id	app/params/category_params.rb	/^  def id$/;"	f	class:CategoryParams
+index	app/controllers/admin/categories_controller.rb	/^    def index$/;"	f	class:Admin.CategoriesController
+index	app/controllers/admin/products_controller.rb	/^    def index$/;"	f	class:Admin.ProductsController
+index	app/controllers/carts_controller.rb	/^  def index$/;"	f	class:CartsController
+index	app/controllers/store_controller.rb	/^  def index$/;"	f	class:StoreController
+initialize	app/params/category_params.rb	/^  def initialize raw_params$/;"	f	class:CategoryParams
+initialize	app/params/line_params.rb	/^  def initialize raw_params, session$/;"	f	class:LineParams
+initialize	app/services/carts/find_or_create.rb	/^    def initialize params$/;"	f	class:Carts.FindOrCreate
+initialize	app/services/categories/delegator.rb	/^    def initialize params, find_or_create_class: FindOrCreate$/;"	f	class:Categories.Delegator
+initialize	app/services/categories/find_or_create.rb	/^    def initialize params$/;"	f	class:Categories.FindOrCreate
+initialize	app/services/lines/create.rb	/^    def initialize params$/;"	f	class:Lines.Create
+line_params	app/controllers/lines_controller.rb	/^  def line_params$/;"	f	class:LinesController
+new	app/controllers/admin/categories_controller.rb	/^    def new$/;"	f	class:Admin.CategoriesController
+new	app/controllers/admin/products_controller.rb	/^    def new$/;"	f	class:Admin.ProductsController
+new_params_hash	app/params/category_params.rb	/^  def new_params_hash$/;"	f	class:CategoryParams
+params	app/params/category_params.rb	/^  def params$/;"	f	class:CategoryParams
+params	app/params/line_params.rb	/^  def params$/;"	f	class:LineParams
+presenter	app/controllers/carts_controller.rb	/^  def presenter cart$/;"	f	class:CartsController
+product	app/services/lines/create.rb	/^    def product$/;"	f	class:Lines.Create
+product_id	app/controllers/store_controller.rb	/^  def product_id$/;"	f	class:StoreController
+product_id	app/params/line_params.rb	/^  def product_id$/;"	f	class:LineParams
+product_params	app/controllers/admin/products_controller.rb	/^    def product_params$/;"	f	class:Admin.ProductsController
+show	app/controllers/admin/categories_controller.rb	/^    def show$/;"	f	class:Admin.CategoriesController
+show	app/controllers/store_controller.rb	/^  def show$/;"	f	class:StoreController
+subcategory?	app/params/category_params.rb	/^  def subcategory?$/;"	f	class:CategoryParams
+subcategory_params	app/params/category_params.rb	/^  def subcategory_params$/;"	f	class:CategoryParams
+title	app/params/category_params.rb	/^  def title$/;"	f	class:CategoryParams
